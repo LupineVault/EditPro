@@ -1,4 +1,4 @@
-   /* Style for the label */
+/* Style for the label */
     label[for="encodingSelector"] {
         display: block;
         margin: 15px 0 5px; /* Compact spacing */
@@ -272,4 +272,36 @@
         }
         .modal button:hover {
             background-color: #e05656;
+        }
+
+        .about-button, .file-manager-toggle, .fullscreen-toggle, .copy-button, .convert-button {
+            background-color: #051948; /* Green */
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .repo-link-container {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .repo-link-container label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .repo-link-container input {
+            width: 80%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
         }

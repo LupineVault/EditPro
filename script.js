@@ -103,3 +103,22 @@ function openFileManager() {
             document.exitFullscreen();
         }
     }
+
+    function convertLinks() {
+    const repoLink = document.getElementById('repoLink').value;
+    if (!repoLink) {
+        alert('Please enter a GitHub repository link.');
+        return;
+    }
+
+    const userRepo = repoLink.replace('https://github.com/', '').replace(/\/$/, '');
+    const editorContent = document.getElementById('codeEditor').innerHTML;
+    const updatedContent = editorContent.replace(/(src|href)="([^"]+)"/g, (match, p1, p2) => {
+        if (p2.startsWith('http') || p2.startsWith('//')) {
+            return match;
+        }
+        return `${p1}="https://cdn.jsdelivr.net/gh/${userRepo}@main/${p2}"`;
+    });
+
+    document.getElementById('codeEditor').innerHTML = updatedContent;
+}

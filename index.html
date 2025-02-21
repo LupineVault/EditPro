@@ -3,12 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML Unleashed</title>
+    <title>HypertextGO</title>
     <link rel="icon" href="https://i.imgur.com/NyPZxPZ.png" type="image/png">
 
     <!-- External CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/purrlyy/html-unleashed/style.css">
+    <link rel="stylesheet" href="style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet" />
+    <style>
+        .repo-link-container {
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
 <div class="container">
@@ -42,6 +47,12 @@
     <button onclick="copyDataUrl()" class="copy-button">Copy Data URL</button>
 </div>
 
+<div class="repo-link-container">
+    <label for="repoLink">GitHub Repository Link (for CDN):</label>
+    <input type="text" id="repoLink" placeholder="https://github.com/USER/REPO">
+    <button onclick="convertLinks()" class="convert-button">Convert Links To JSDelivr CDN</button>
+</div>
+
 <div id="fileManagerModal" class="modal">
     <h2>File Manager</h2>
     <button onclick="document.getElementById('fileInput').click()">Upload HTML File</button>
@@ -58,6 +69,7 @@
 <input type="file" id="fileInput" accept=".html" style="display: none;" onchange="handleFileUpload(event)">
 
 <!-- External JavaScript -->
-<script src="https://cdn.jsdelivr.net/gh/purrlyy/html-unleashed/script.js"></script>
+<script src="script.js"></script>
+
 </body>
 </html>
