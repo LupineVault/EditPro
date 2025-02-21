@@ -1,7 +1,7 @@
 ![HypertextGo Logo](https://github.com/LupineVault/EditPro/blob/4158f9d9ddbd7639adc19c3fc649d8e61cb2837c/logo.svg)
 
 ### Features 
-AI Code Help - CDN Conversion - HTML Editing - File Save/Upload - Data Link Viewing
+AI Code Help (Code Copying May Not Work On Data Links) - CDN Conversion - HTML Editing - File Save/Upload - Data Link Viewing
 
 #### Old:
 This is a fork of [HTML Unleashed by Taz](https://github.com/tazz-devv/HTML-unleashed) with updated UI and more features
