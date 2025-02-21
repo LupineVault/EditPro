@@ -17,8 +17,7 @@ data:text/html,%3C!DOCTYPE%20html%3E%3Chtml%20lang%3D%22en%22%3E%3Chead%3E%20%20
 
 2. **Download the index.html file**
 
-### Deploy to Cloud Service
-Deploy HTML Unleashed to your preferred cloud service using the buttons below:
+
 
 
 
