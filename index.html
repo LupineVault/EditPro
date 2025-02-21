@@ -73,14 +73,14 @@
 
 <div id="aboutModal" class="modal">
     <h2>About HypertextGO</h2>
-    <p>HypertextGo is a fork of <a href="https://github.com/tazz-devv/HTML-unleashed" target="_blank">HTML Unleashed by Taz</a> which brings you AI, improved UI, and automatic CDN converting with GitHub support</p>
+    <p>HypertextGo is a fork of <a href="https://github.com/tazz-devv/HTML-unleashed" target="_blank">HTML Unleashed by Taz</a> which brings you AI, improved UI, and automatic CDN converting with GitHub support<br>Version 0.2.1</p>
     <button class="close-button" onclick="closeAboutModal()">Close</button>
 </div>
 
 <input type="file" id="fileInput" accept=".html" style="display: none;" onchange="handleFileUpload(event)">
 
 <!-- External JavaScript -->
-<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/LupineVault/HypertextGO@fa21c4161e1b56fcf610110d8628ae0632145964/script.js"></script>
 <script>
     document.addEventListener('DOMContentLoaded', (event) => {
         Prism.highlightAll();
