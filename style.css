@@ -80,7 +80,7 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #1e1e2f;
+            background-color:#120924;
             color: #fff;
             animation: fadeIn 1.5s ease-in-out;
         }
@@ -305,3 +305,18 @@
             border: 1px solid #ccc;
             border-radius: 4px;
         }
+        /* Custom CSS for black theme */
+
+  
+  /* Stars */
+  #canvas {
+      display: block;
+      position: fixed;  /* Cover the viewport */
+      top: 0;
+      left: 0;
+      width: 100vw;  /* 100% of the viewport width */
+      height: 100vh; /* 100% of the viewport height */
+      z-index: -99999;
+      
+      pointer-events: none; /* Prevents canvas from interfering with interactions */
+  }
