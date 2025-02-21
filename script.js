@@ -113,6 +113,8 @@ function openFileManager() {
 
     const userRepo = repoLink.replace('https://github.com/', '').replace(/\/$/, '');
     const editorContent = document.getElementById('codeEditor').innerHTML;
+
+    
     const updatedContent = editorContent.replace(/(src|href)="([^"]+)"/g, (match, p1, p2) => {
         if (p2.startsWith('http') || p2.startsWith('//')) {
             return match;
@@ -121,4 +123,22 @@ function openFileManager() {
     });
 
     document.getElementById('codeEditor').innerHTML = updatedContent;
+
+    
+    const iframes = document.querySelectorAll('iframe');
+    iframes.forEach(iframe => {
+        try {
+            const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+            const iframeContent = iframeDoc.documentElement.innerHTML;
+            const updatedIframeContent = iframeContent.replace(/(src|href)="([^"]+)"/g, (match, p1, p2) => {
+                if (p2.startsWith('http') || p2.startsWith('//')) {
+                    return match;
+                }
+                return `${p1}="https://cdn.jsdelivr.net/gh/${userRepo}@main/${p2}"`;
+            });
+            iframeDoc.documentElement.innerHTML = updatedIframeContent;
+        } catch (error) {
+            console.error('Error accessing iframe content:', error);
+        }
+    });
 }

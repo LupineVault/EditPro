@@ -142,7 +142,7 @@
             const copyBtn = document.createElement("button");
             copyBtn.innerHTML = '<i class="fas fa-copy"></i>';
             copyBtn.classList.add("copy-btn");
-            copyBtn.onclick = () => copyToClipboard(text);
+            copyBtn.onclick = () => copyToClipboard(messageDiv);
             messageDiv.appendChild(copyBtn);
         }
 
@@ -151,8 +151,14 @@
         Prism.highlightAll();
     }
 
-    function copyToClipboard(text) {
-        navigator.clipboard.writeText(text).then(() => alert("Copied to clipboard!"));
+    function copyToClipboard(messageDiv) {
+        const codeElement = messageDiv.querySelector('pre code');
+        if (codeElement) {
+            const text = codeElement.textContent;
+            navigator.clipboard.writeText(text).then(() => alert("Copied to clipboard!"));
+        } else {
+            alert("No code to copy");
+        }
     }
 </script>
 
