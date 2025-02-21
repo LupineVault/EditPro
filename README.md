@@ -1,5 +1,9 @@
 ![HypertextGo Logo](https://github.com/LupineVault/EditPro/blob/4158f9d9ddbd7639adc19c3fc649d8e61cb2837c/logo.svg)
 
+# Code anywhere with HypertextGO!
+
+With HypertextGO, you can code anywhere. Be it school, work, or at home!
+
 ### Features 
 AI Code Help (Code Copying May Not Work On Data Links) - CDN Conversion - HTML Editing - File Save/Upload - Data Link Viewing
 
