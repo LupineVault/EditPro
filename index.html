@@ -14,6 +14,7 @@
             margin-top: 20px;
         }
     </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/LupineVault/stars@8c655dc0f1e096b8f5c95aa6a2decf818771614a/stars.js"></script>
 </head>
 <body>
@@ -79,7 +80,11 @@
 
 <!-- External JavaScript -->
 <script src="https://cdn.jsdelivr.net/gh/LupineVault/EditPro@e03ad0a22d1c331fb5f2d468d55658ccf643d57f/script.js"></script>
-
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        Prism.highlightAll();
+    });
+</script>
 
 </body>
 </html>
